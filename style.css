@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,315&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/all.css');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+    font-weight: bold;
+    margin: .5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+input {
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 300px;
+    max-width: 85%;
+}
+
+#header {
+    position: relative;
+    padding: 1rem;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#body {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#user {
+    border-right: 1px solid #aaa;
+    flex: 0 0 250px;
+    padding: 1rem;
+}
+
+#rank {
+    border-left: 1px solid #aaa;
+    flex: 0 0 250px;
+    padding: 1rem;
+}
+
+#shop {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+#gameArea {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+#signupWindow {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .3);
+}
+
+#signupPopup {
+    position: relative;
+    display: block;
+    width: 800px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, .3);
+}
+
+#signupHeader {
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#signupBody {
+    padding: 1rem;
+    padding-left: 2rem;
+}
+
+#rankList {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #body {
+        flex-direction: column;
+    }
+
+    #user {
+        border: none;
+        border-bottom: 1px solid #aaa;
+        flex: 1 1 auto;
+    }
+    
+    #rank {
+        border: none;
+        border-top: 1px solid #aaa;
+        flex: 1 1 auto;
+    }
+
+    #signupPopup {
+        width: 800px;
+        height: 100%;
+        max-height: 300px;
+        max-width: 100%;
+    }
+}
+
+.btn {
+    width: 100px;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    background: #f00;
+    font-weight: bold;
+}
+
+.btn:hover {
+    animation: btn 1s linear infinite;
+}
+
+@keyframes btn {
+    0% { background: #f00; }
+    50% { background: #00f; }
+    100% { background: #f00; }
+}
+
+.shop {
+    padding-top: .5rem;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skin {
+    position: relative;
+    background: #eee;
+    border: 1px solid #aaa;
+    margin: .5rem;
+    flex: 1 0 200px;
+}
+
+.skinBody {
+    background: #aaa;
+    width: 100%;
+    height: 100px;
+    background-image: url("/assets/bg/bg0.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 2rem;
+}
+
+.skinDot {
+    position: relative;
+    margin-bottom: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-90deg);
+}
+
+.skinName {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    bottom: 2.5rem;
+    left: .5rem;
+    color: #fff;
+    text-shadow: -2px 2px 2px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.skinBtn {
+    text-align: left;
+    color: #fff;
+    background: #000;
+    padding: .5rem;
+}
+
+.skinBtn:hover {
+    animation: skinBtnHover 250ms linear 1;
+    background: #dcffa1;
+    color: #000;
+}
+
+@keyframes skinBtnHover {
+    0% {
+        background: #000;
+        color: #fff;
+    }
+
+    100% {
+        background: #dcffa1;
+        color: #000;
+    }
+}
+
+.skinBtnUsed {
+    text-align: left;
+    color: #000;
+    background: #00ff84;
+    padding: .5rem;
+}
+
+.skinBtnUsed:hover {
+    animation: skinBtnUsedHover 250ms linear 1;
+    background: #005928;
+    color: #fff;
+}
+
+@keyframes skinBtnUsedHover {
+    0% {
+        background: #00ff84;
+        color: #000;
+    }
+
+    100% {
+        background: #005928;
+        color: #fff;
+    }
+}
+
+.rank {
+    padding: .5rem;
+    margin: .3rem;
+    
+}
+
+.number {
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: .3rem;
+    display: inline;
+    font-family: monospace;
+}
+
+.name {
+    color: #000;
+    display: inline;
+    margin-left: 1rem;
+}
+
+.rankId {
+    color: #888;
+    font-size: 8px;
+    display: inline;
+}
+
+.score {
+    color: #000;
+    font-weight: bold;
+    display: inline;
+    margin-left: 1rem;
+}
